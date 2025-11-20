@@ -1,15 +1,15 @@
 from rest_framework import generics
 from .models import ToDo
-from .serialziers import StudentSerializer
+from .serialziers import ToDoSerializer
 
-class StudentView(generics.CreateAPIView):
+class TodoView(generics.CreateAPIView):
     queryset = ToDo.objects.all()
-    serializer_class = StudentSerializer
+    serializer_class = ToDoSerializer
 
-class StudentList(generics.ListAPIView):
+class ToDoList(generics.ListAPIView):
     queryset = ToDo.objects.all()
-    serializer_class = StudentSerializer
+    serializer_class = ToDoSerializer
 
-class StudentDetail(generics.UpdateAPIView):
+class ToDoDetail(generics.UpdateAPIView):
     queryset = ToDo.objects.all()
-    serializer_class = StudentSerializer
+    serializer_class = ToDoSerializer
