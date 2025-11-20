@@ -3,7 +3,7 @@ from django.urls import path, include
 from .views import TodoView,ToDoList,ToDoDetail
 
 urlpatterns = [
-    path('list/', TodoView.as_view(),name="malumoaltni korish"),
-    path('create/', ToDoList.as_view(),name='malumoaltarni yaraytish'),
-    path('detail/<int:pk>/`x', ToDoDetail.as_view(),name = "malumoatlarni ochirish"),
+    path('list/', ToDoList.as_view(),name="malumoaltni korish"),
+    path('create/', TodoView.as_view(),name='malumoaltarni yaraytish'),
+    path('patch/<int:pk>/', ToDoDetail.as_view(),name = "yanqilash"),
 ]
